@@ -9,6 +9,7 @@ from pdf_parser import PDFParser
 
 
 def main():
+    print("<------------ Simple document parser ------------>")
     directory = input("[*] Enter the path to work directory --> ")
     columns = int(input("[*] Enter number of columns --> "))
     table_filename = input("[*] Enter file name for table --> ")
