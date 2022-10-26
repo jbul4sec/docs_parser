@@ -21,5 +21,5 @@ python main.py
 ```
 
 - Enter the path to work directory
-- Enter number of columns
+- Enter amount columns
 - Enter file name for table
