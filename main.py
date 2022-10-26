@@ -17,7 +17,8 @@ def main():
     doc_table = DocxTable(columns=columns, filename=table_filename)
     table_handler = doc_table.get_table()
 
-    count = 1
+    count = 0
+    fulfil_table(count, "", "", "", table_handler)
     for file in os.listdir(path=directory):
         path = directory + '/' + file
         if file.endswith('.pdf'):
@@ -28,8 +29,8 @@ def main():
         else:
             title = file
             description = f'Unknown type of file ---> {file}'
-        fulfil_table(count, file, title, str(description), table_handler)
         count += 1
+        fulfil_table(count, file, title, str(description), table_handler)
 
     doc_table.save_table()
 

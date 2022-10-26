@@ -47,7 +47,7 @@ class DocxTable:
 
 
 def fulfil_table(number: int, file: str, title: str, description: str, table: Document):
-    if number == 1:
+    if number == 0:
         row_cells = table.rows[0].cells
         row_cells[0].text = '№'
         row_cells[1].text = 'Имя файла'
