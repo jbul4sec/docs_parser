@@ -19,7 +19,7 @@ def main():
 
     count = 0
     fulfil_table(count, "", "", "", table_handler)
-    for file in os.listdir(path=directory):
+    for file in sorted(os.listdir(path=directory), key=lambda x: int(x[11:14])):
         path = directory + '/' + file
         if file.endswith('.pdf'):
             title = PDFParser.get_title_or_description(path)
